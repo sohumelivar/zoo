@@ -1,7 +1,6 @@
 const React = require('react');
-const isAuth = require('../middlewares/isauth');
 
-module.exports = function Layout({ title, children, username }) {
+module.exports = function Layout({ title, children}) {
   return (
     <html lang="en">
       <head>
