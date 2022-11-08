@@ -34,6 +34,8 @@ adminForm?.addEventListener('submit', async (event) => {
   // console.log('ADMINLOGIN.JS+++++++++++++++++++++', data);
   if (data.status === 'error') {
     errLog.innerHTML = `${data.message} <img src="https://s12.favim.com/gif_previews/8/809/8095/80956/8095623.gif" width="70"/>`;
+  } else if (data.status === 'errorLogin') {
+    errLog.innerHTML = `${data.message} <img src="https://i.gifer.com/origin/83/83490c19302ab01c38eb47f80b7d705d_w200.gif" width=70"/>`;
   } else {
     window.location.assign('/admin');
   }
