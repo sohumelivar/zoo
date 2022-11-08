@@ -6,8 +6,17 @@ const morgan = require('morgan');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
+const isAuth = require('./middlewares/isAuth');
+const adminPageRouter = require('./routers/adminPage.router');
+const changeTariffsRouter = require('./routers/changeTariffs.router');
+const ChangeAnimalsRouter = require('./routers/changeAnimals.router');
+
 const app = express();
 const PORT = process.env.PORT ?? 3000;
+
+app.use('/admin', isAuth, adminPageRouter);
+app.use('/changeTariffs', isAuth, changeTariffsRouter);
+app.use('/changeAnimals', isAuth, ChangeAnimalsRouter);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public/')));
