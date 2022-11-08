@@ -21,5 +21,4 @@ app.use(session({
   saveUninitialized: false,
   cookie: { secure: false },
 }));
-
 app.listen(PORT, () => { console.log('never gonna give you up !!!'); });
