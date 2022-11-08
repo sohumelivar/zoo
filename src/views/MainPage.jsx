@@ -15,7 +15,7 @@ module.exports = function MainPage({ title, username }) {
             <input name="name" placeholder="login" type="text" className="form-control" />
           </div>
           <div className="mb-3">
-            <input name="password" placeholder="password" type="current-password" className="form-control" />
+            <input name="password" placeholder="password" type="password" className="form-control" />
           </div>
           <br />
           <button type="submit" className="btn btn-info entry">Войти</button>
