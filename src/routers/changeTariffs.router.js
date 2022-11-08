@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const renderTemplate = require('../lib/renderTemplate');
-const AdminPage = require('../views/AdminPage');
+const ChangeTariffs = require('../views/ChangeTariffs');
 
 router.get('/', (req, res) => {
-  renderTemplate(AdminPage, { title: 'Change tariffs' }, res);
+  renderTemplate(ChangeTariffs, { title: 'Change tariffs' }, res);
 });
 
 module.exports = router;
