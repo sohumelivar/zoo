@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res) => {
   const { name, password } = req.body;
+  console.log(req.body);
   const logUser = await Admin.findOne({ where: { name } });
   if (!name.trim() || !password.trim()) {
     return res.status(404).json({ status: 'error', message: 'Пожалуйста заполните все поля' });
