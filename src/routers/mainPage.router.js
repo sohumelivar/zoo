@@ -9,18 +9,22 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const { name, password } = req.body;
-  const logUser = await Admin.findOne({ where: { name } });
-  if (!name.trim() || !password.trim()) {
-    return res.status(404).json({ status: 'error', message: 'Пожалуйста заполните все поля' });
-  }
-  if (logUser) {
-    const validPassword = await bcrypt.compare(password, logUser.password);
-    if (validPassword) {
-      req.session.username = logUser.name;
-      return res.json({ status: 'success', url: '/' });
+  try {
+    const { name, password } = req.body;
+    const logUser = await Admin.findOne({ where: { name } });
+    if (!name.trim() || !password.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Пожалуйста заполните все поля' });
     }
+    if (logUser) {
+      const validPassword = await bcrypt.compare(password, logUser.password);
+      if (validPassword) {
+        req.session.username = logUser.name;
+        return res.json({ status: 'success', url: '/admin' });
+      }
+    }
+    return res.status(404).json({ status: 'error', message: 'Неправильный логин или пароль' });
+  } catch (error) {
+    return res.status(500).json({ message: `${error.message}` });
   }
-  return res.status(404).json({ status: 'error', message: 'Неправильный логин или пароль' });
 });
 module.exports = router;

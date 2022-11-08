@@ -16,7 +16,7 @@ module.exports = function MainPage({ title }) {
         <h3>Добро пожаловать в урюпинский Зоопарк!</h3>
       </div>
       <div className="adminDiv container">
-        <form method="POST" action="/" id="adminForm">
+        <form id="adminForm">
           <div className="mb-3">
             <input name="name" placeholder="login" type="text" className="form-control" />
           </div>
