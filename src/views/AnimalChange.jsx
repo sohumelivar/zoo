@@ -14,7 +14,7 @@ module.exports = function ChangeAnimals({ title }) {
             Список фотографий?
           </div>
           <div className="mb-3">
-            <input name="description" placeholder="Change description" type="text" className="form-control" />
+            <textarea name="description" placeholder="Change description" type="text" className="form-control" id="" cols="3" rows="3" />
           </div>
           <button type="submit" className="btn btn-info">Submit</button>
           <p id="err"> </p>
