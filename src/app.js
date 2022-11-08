@@ -10,7 +10,7 @@ const isAuth = require('./middlewares/isAuth');
 const adminPageRouter = require('./routers/adminPage.router');
 const changeTariffsRouter = require('./routers/changeTariffs.router');
 const changeAnimalsRouter = require('./routers/changeAnimals.router');
-const tariffsRouter = require('./routers/tariffsPage');
+const tariffsRouter = require('./routers/tariffsPage.router');
 const animalChangeRouter = require('./routers/animalChange.router');
 const mainPageRouter = require('./routers/mainPage.router');
 
