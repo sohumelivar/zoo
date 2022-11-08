@@ -33,7 +33,7 @@ adminForm?.addEventListener('submit', async (event) => {
   const data = await response.json();
   // console.log('ADMINLOGIN.JS+++++++++++++++++++++', data);
   if (data.status === 'error') {
-    errLog.innerHTML = `${data.message}`;
+    errLog.innerHTML = `${data.message} <img src="https://s12.favim.com/gif_previews/8/809/8095/80956/8095623.gif" width="70"/>`;
   } else {
     window.location.assign('/admin');
   }
