@@ -3,7 +3,6 @@ const renderTemplate = require('../lib/renderTemplate');
 const ChangeTariffs = require('../views/ChangeTariffs');
 const { Tariff } = require('../../db/models');
 
-
 router.get('/', async (req, res) => {
   try {
     const tariffs = await Tariff.findAll({ raw: true });
@@ -29,5 +28,6 @@ router.post('/', async (req, res) => {
   } catch (error) {
     console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
   }
-  
+});
+
 module.exports = router;
