@@ -17,16 +17,16 @@ module.exports = function ChangeAnimals({ title }) {
         <h4>Добавить животное</h4>
         <form>
           <div className="mb-3">
-            <input name="name" placeholder="name" type="text" className="form-control" />
+            <input name="name" placeholder="Name" type="text" className="form-control" />
           </div>
           <div className="mb-3">
             Список фотографий?
           </div>
           <div className="mb-3">
-            <input name="description" placeholder="Description" type="text" className="form-control" />
+            <textarea name="description" placeholder="Description" type="text" className="form-control" id="" rows="3" />
           </div>
           <button type="submit" className="btn btn-info">Submit</button>
-          <p id="regErr"> </p>
+          <p id="changeAnimalsErr"> </p>
         </form>
 
       </div>
