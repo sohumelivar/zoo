@@ -1,17 +1,11 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function MainPage({ title }) {
+module.exports = function MainPage({ title, username }) {
   return (
-    <Layout title={title}>
+    <Layout username={username} title={title}>
+      <link rel="stylesheet" href="/css/animals.css" />
       <script defer src="js/adminLogin.js" />
-      <nav className="navMenu">
-        <a href="/animals"><button type="button" className="btn btn-outline-dark">Наши животные</button></a>
-        {' '}
-        <a href="/tariffs"><button type="button" className="btn btn-outline-dark">Тарифы и услуги</button></a>
-        {' '}
-        <button id="adminBtn" type="button" className="btn btn-outline-dark">Вход для администратора</button>
-      </nav>
       <div className="container">
         <h3>Добро пожаловать в урюпинский Зоопарк!</h3>
       </div>
@@ -21,12 +15,15 @@ module.exports = function MainPage({ title }) {
             <input name="name" placeholder="login" type="text" className="form-control" />
           </div>
           <div className="mb-3">
-            <input name="password" placeholder="password" type="current-password" className="form-control" />
+            <input name="password" placeholder="password" type="password" className="form-control" />
           </div>
           <br />
           <button type="submit" className="btn btn-info entry">Войти</button>
           <p id="errLog"> </p>
         </form>
+      </div>
+      <div className="elephant body">
+        <div className="face" />
       </div>
     </Layout>
   );

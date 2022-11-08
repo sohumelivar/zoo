@@ -5,7 +5,7 @@ const MainPage = require('../views/MainPage');
 const { Admin } = require('../../db/models');
 
 router.get('/', (req, res) => {
-  renderTemplate(MainPage, { title: 'Welcome to the amazing ZOO' }, res);
+  renderTemplate(MainPage, { title: 'Welcome to the amazing ZOO', username: req.session.username }, res);
 });
 
 router.post('/', async (req, res) => {
@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
         return res.json({ status: 'success', url: '/admin' });
       }
     }
-    return res.status(404).json({ status: 'error', message: 'Неправильный логин или пароль' });
+    return res.status(404).json({ status: 'errorLogin', message: 'Неправильный логин или пароль' });
   } catch (error) {
     return res.status(500).json({ message: `${error.message}` });
   }
