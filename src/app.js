@@ -10,6 +10,7 @@ const isAuth = require('./middlewares/isAuth');
 const adminPageRouter = require('./routers/adminPage.router');
 const changeTariffsRouter = require('./routers/changeTariffs.router');
 const ChangeAnimalsRouter = require('./routers/changeAnimals.router');
+const tarrifsRouter = require('./routers/tarrifsPage');
 const AnimalChangeRouter = require('./routers/AnimalChange.router');
 
 const app = express();
@@ -18,6 +19,7 @@ const PORT = process.env.PORT ?? 3000;
 app.use('/admin', isAuth, adminPageRouter);
 app.use('/changeTariffs', isAuth, changeTariffsRouter);
 app.use('/changeAnimals', isAuth, ChangeAnimalsRouter);
+app.use('/tarrifs', tarrifsRouter);
 app.use('/changeAnimal', isAuth, AnimalChangeRouter);
 
 app.use(express.json());
@@ -34,3 +36,5 @@ app.use(session({
 }));
 
 app.listen(PORT, () => { console.log('never gonna give you up !!!'); });
+
+// ! reset; npm run dev
