@@ -6,6 +6,8 @@ const morgan = require('morgan');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
+const isAuth = require('./middlewares/isAuth');
+
 const app = express();
 const PORT = process.env.PORT ?? 3000;
 
@@ -21,4 +23,5 @@ app.use(session({
   saveUninitialized: false,
   cookie: { secure: false },
 }));
+
 app.listen(PORT, () => { console.log('never gonna give you up !!!'); });
