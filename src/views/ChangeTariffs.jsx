@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function ChangeTariffs({ title }) {
+module.exports = function ChangeTariffs({ title, username }) {
   return (
-    <Layout title={title}>
+    <Layout username={username} title={title}>
       <h3>Change Tariffs</h3>
     </Layout>
   );

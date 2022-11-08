@@ -3,7 +3,7 @@ const renderTemplate = require('../lib/renderTemplate');
 const AdminPage = require('../views/AdminPage');
 
 router.get('/', (req, res) => {
-  renderTemplate(AdminPage, { title: 'Change tariffs' }, res);
+  renderTemplate(AdminPage, { title: 'Change tariffs', username: req.session.username }, res);
 });
 
 module.exports = router;

@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function ChangeAnimals({ title }) {
+module.exports = function ChangeAnimals({ title, username }) {
   return (
-    <Layout title={title}>
+    <Layout username={username} title={title}>
       <h3>Страница изменения животных</h3>
       <div className="container">
         <h4>Текущий список животных:</h4>

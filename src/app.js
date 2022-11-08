@@ -13,6 +13,7 @@ const changeAnimalsRouter = require('./routers/changeAnimals.router');
 const tariffsRouter = require('./routers/tariffsPage');
 const animalChangeRouter = require('./routers/animalChange.router');
 const mainPageRouter = require('./routers/mainPage.router');
+const loguotRouter = require('./routers/logout.router');
 
 const app = express();
 const PORT = process.env.PORT ?? 3000;
@@ -32,6 +33,7 @@ app.use(session({
 
 app.use('/', mainPageRouter);
 app.use('/admin', isAuth, adminPageRouter);
+app.use('/logout', loguotRouter);
 app.use('/changeTariffs', isAuth, changeTariffsRouter);
 app.use('/changeAnimals', isAuth, changeAnimalsRouter);
 app.use('/tariffs', tariffsRouter);

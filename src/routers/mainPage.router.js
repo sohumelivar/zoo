@@ -5,7 +5,7 @@ const MainPage = require('../views/MainPage');
 const { Admin } = require('../../db/models');
 
 router.get('/', (req, res) => {
-  renderTemplate(MainPage, { title: 'Welcome to the amazing ZOO' }, res);
+  renderTemplate(MainPage, { title: 'Welcome to the amazing ZOO', username: req.session.username }, res);
 });
 
 router.post('/', async (req, res) => {
