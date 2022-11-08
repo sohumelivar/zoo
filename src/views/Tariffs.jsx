@@ -4,9 +4,11 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function ChangeTariffs({title, childrenWeekEnd, childrenWeekDay, adultWeekEnd, adultWeekDay }) {
+module.exports = function ChangeTariffs({
+  title, childrenWeekEnd, childrenWeekDay, adultWeekEnd, adultWeekDay, username,
+}) {
   return (
-    <Layout title={title}>
+    <Layout username={username} title={title}>
       <h1>Стоимость посещения зоопарка</h1>
       <br />
       <br />
