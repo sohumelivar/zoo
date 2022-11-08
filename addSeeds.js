@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt');
 const { Tariff } = require('./db/models');
 const { Admin } = require('./db/models');
 
@@ -6,7 +7,9 @@ const { Admin } = require('./db/models');
 
 // const addAdmin1 = async () => {
 //   try {
-//     const result = await Admin.create({ name: 'admin1', password: '123' });
+//     const password = '123';
+//     const hashedPassword = await bcrypt.hash(password, 10);
+//     const result = await Admin.create({ name: 'admin1', password: hashedPassword });
 //     return result;
 //   } catch (error) {
 //     console.log('ERROR ADDSEEDS.JS ADMIN1 --- >>> ', error);
@@ -18,7 +21,9 @@ const { Admin } = require('./db/models');
 
 // const addAdmin2 = async () => {
 //   try {
-//     const result = await Admin.create({ name: 'admin2', password: '123' });
+//     const password = '123';
+//     const hashedPassword = await bcrypt.hash(password, 10);
+//     const result = await Admin.create({ name: 'admin2', password: hashedPassword });
 //     return result;
 //   } catch (error) {
 //     console.log('ERROR ADDSEEDS.JS ADMIN2 --- >>> ', error);
@@ -30,7 +35,9 @@ const { Admin } = require('./db/models');
 
 // const addAdmin3 = async () => {
 //   try {
-//     const result = await Admin.create({ name: 'admin3', password: '123' });
+//     const password = '123';
+//     const hashedPassword = await bcrypt.hash(password, 10);
+//     const result = await Admin.create({ name: 'admin3', password: hashedPassword });
 //     return result;
 //   } catch (error) {
 //     console.log('ERROR ADDSEEDS.JS ADMIN3 --- >>> ', error);
