@@ -39,7 +39,7 @@ module.exports = function ChangeTariffs({
         <p> - Дети до 7 лет - Бесплатно</p>
         <h5>Выходной день</h5>
         <p> - Единый взрослый ( c {adultWeekEnd.age} лет) - {adultWeekEnd.additionalTicket} ₽</p>
-        <p> - Единый детский (с 7 до {childrenWeekEnd.age}) - {childrenWeekEnd.additionalTicket } ₽</p>
+        <p> - Единый детский (с 7 до {childrenWeekEnd.age}) - {childrenWeekEnd.additionalTicket} ₽</p>
         <p> - Дети до 7 лет - Бесплатно</p>
       </div>
       <br />
