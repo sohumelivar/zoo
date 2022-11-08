@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/no-unescaped-entities */
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function ChangeTariffs({ title }) {
+module.exports = function ChangeTariffs({title, childrenWeekEnd, childrenWeekDay, adultWeekEnd, adultWeekDay }) {
   return (
     <Layout title={title}>
       <h1>Стоимость посещения зоопарка</h1>
@@ -16,12 +18,12 @@ module.exports = function ChangeTariffs({ title }) {
       <div>
         <h4>Единый билет на все экспозиции Урюпинского зоопарка</h4>
         <h5>Будний день</h5>
-        <p> - Единый взрослый ( c 17 лет) - 300 ₽</p>
-        <p> - Единый детский (с 7 до 17) - 200 ₽</p>
+        <p> - Единый взрослый ( c {adultWeekDay.age} лет) - {adultWeekDay.basicPrice} ₽</p>
+        <p> - Единый детский (с 7 до {childrenWeekDay.age}) - {childrenWeekDay.basicPrice} ₽</p>
         <p> - Дети до 7 лет - Бесплатно</p>
         <h5>Выходной день</h5>
-        <p> - Единый взрослый ( c 17 лет) - 600 ₽</p>
-        <p> - Единый детский (с 7 до 17) - 400 ₽</p>
+        <p> - Единый взрослый ( c {adultWeekEnd.age} лет) - {adultWeekEnd.basicPrice} ₽</p>
+        <p> - Единый детский (с 7 до {childrenWeekEnd.age}) - {childrenWeekEnd.basicPrice} ₽</p>
         <p> - Дети до 7 лет - Бесплатно</p>
       </div>
       <br />
@@ -30,12 +32,12 @@ module.exports = function ChangeTariffs({ title }) {
         <h4>Экспозиция "Зооэкзотариум" (Животные с 5 континентов планеты Земля)</h4>
         <h6>(при приобретении билета на основную территорию)</h6>
         <h5>Будний день</h5>
-        <p> - Единый взрослый ( c 17 лет) - 250 ₽</p>
-        <p> - Единый детский (с 7 до 17) - 150 ₽</p>
+        <p> - Единый взрослый ( c {adultWeekDay.age} лет) - {adultWeekDay.additionalTicket} ₽</p>
+        <p> - Единый детский (с 7 до {childrenWeekDay.age}) - {childrenWeekDay.additionalTicket} ₽</p>
         <p> - Дети до 7 лет - Бесплатно</p>
         <h5>Выходной день</h5>
-        <p> - Единый взрослый ( c 17 лет) - 300 ₽</p>
-        <p> - Единый детский (с 7 до 17) - 200 ₽</p>
+        <p> - Единый взрослый ( c {adultWeekEnd.age} лет) - {adultWeekEnd.additionalTicket} ₽</p>
+        <p> - Единый детский (с 7 до {childrenWeekEnd.age}) - {childrenWeekEnd.additionalTicket } ₽</p>
         <p> - Дети до 7 лет - Бесплатно</p>
       </div>
       <br />
@@ -44,12 +46,12 @@ module.exports = function ChangeTariffs({ title }) {
         <h4>Катание на конном экипаже или электромобиле по зоопарку</h4>
         <h6>(при приобретении билета на основную территорию)</h6>
         <h5>Будний день</h5>
-        <p> - Взрослый ( c 17 лет) - 200 ₽</p>
-        <p> - Детский (с 7 до 17) - 100 ₽</p>
+        <p> - Взрослый ( c {adultWeekDay.age} лет) - {adultWeekDay.ridePrice} ₽</p>
+        <p> - Детский (с 7 до {childrenWeekDay.age}) - {childrenWeekDay.ridePrice} ₽</p>
         <p> - Дети до 7 лет - Бесплатно</p>
         <h5>Выходной день</h5>
-        <p> - Взрослый ( c 17 лет) - 400 ₽</p>
-        <p> - Детский (с 7 до 17) - 200 ₽</p>
+        <p> - Взрослый ( c {adultWeekEnd.age} лет) - {adultWeekEnd.ridePrice} ₽</p>
+        <p> - Детский (с 7 до {childrenWeekEnd.age}) - {childrenWeekEnd.ridePrice} ₽</p>
         <p> - Дети до 7 лет - Бесплатно</p>
       </div>
       <br />
