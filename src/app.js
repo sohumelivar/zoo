@@ -17,17 +17,10 @@ const mainPageRouter = require('./routers/mainPage.router');
 const app = express();
 const PORT = process.env.PORT ?? 3000;
 
-app.use('/', mainPageRouter);
-app.use('/admin', isAuth, adminPageRouter);
-app.use('/changeTariffs', isAuth, changeTariffsRouter);
-app.use('/changeAnimals', isAuth, changeAnimalsRouter);
-app.use('/tariffs', tariffsRouter);
-app.use('/changeAnimal', isAuth, animalChangeRouter);
-
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../public/')));
 app.use(morgan('dev'));
-app.use(express.urlencoded({ extended: true }));
 app.use(session({
   store: new FileStore(),
   name: 'authUser',
@@ -36,6 +29,13 @@ app.use(session({
   saveUninitialized: false,
   cookie: { secure: false },
 }));
+
+app.use('/', mainPageRouter);
+app.use('/admin', isAuth, adminPageRouter);
+app.use('/changeTariffs', isAuth, changeTariffsRouter);
+app.use('/changeAnimals', isAuth, changeAnimalsRouter);
+app.use('/tariffs', tariffsRouter);
+app.use('/changeAnimal', isAuth, animalChangeRouter);
 
 app.listen(PORT, () => { console.log('never gonna give you up !!!'); });
 
