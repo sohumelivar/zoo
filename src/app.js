@@ -11,11 +11,13 @@ const adminPageRouter = require('./routers/adminPage.router');
 const changeTariffsRouter = require('./routers/changeTariffs.router');
 const changeAnimalsRouter = require('./routers/changeAnimals.router');
 const tariffsRouter = require('./routers/tarrifsPage');
-const animalChangeRouter = require('./routers/AnimalChange.router');
+const animalChangeRouter = require('./routers/animalChange.router');
+const mainPageRouter = require('./routers/mainPage.router');
 
 const app = express();
 const PORT = process.env.PORT ?? 3000;
 
+app.use('/', mainPageRouter);
 app.use('/admin', isAuth, adminPageRouter);
 app.use('/changeTariffs', isAuth, changeTariffsRouter);
 app.use('/changeAnimals', isAuth, changeAnimalsRouter);
