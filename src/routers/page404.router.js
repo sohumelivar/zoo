@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const renderTemplate = require('../lib/renderTemplate');
-const AnimalChange = require('../views/AnimalChange');
+const Page404 = require('../views/Page404');
 
 router.get('/', (req, res) => {
-  renderTemplate(AnimalChange, { title: 'Change current animal', username: req.session.username }, res);
+  renderTemplate(Page404, { title: '404', username: req.session.username }, res);
 });
 
 module.exports = router;

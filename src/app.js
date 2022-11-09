@@ -14,9 +14,14 @@ const tariffsRouter = require('./routers/tariffsPage.router');
 const animalChangeRouter = require('./routers/animalChange.router');
 const mainPageRouter = require('./routers/mainPage.router');
 const loguotRouter = require('./routers/logout.router');
+const page404Router = require('./routers/page404.router');
+const animalRouter = require('./routers/animals.router');
+const createdAnimalRouter = require('./routers/createdAnimal.router');
+const updateAnimalRouter = require('./routers/updateAnimal.router');
+const cardAnimals = require('./routers/cardAnimal.router');
 
 const app = express();
-const PORT = process.env.PORT ?? 3000;
+const PORT = process.env.PORT ?? 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -33,11 +38,19 @@ app.use(session({
 
 app.use('/', mainPageRouter);
 app.use('/admin', isAuth, adminPageRouter);
-app.use('/logout', loguotRouter);
+app.use('/logout',isAuth, loguotRouter);
 app.use('/changeTariffs', isAuth, changeTariffsRouter);
 app.use('/changeAnimals', isAuth, changeAnimalsRouter);
 app.use('/tariffs', tariffsRouter);
 app.use('/changeAnimal', isAuth, animalChangeRouter);
+app.use('/404', page404Router);
+
+app.use('/animal', animalRouter);
+app.use('/createanimal', isAuth, createdAnimalRouter);
+app.use('/updateanimal', isAuth, updateAnimalRouter);
+app.use('/animals', cardAnimals);
+
+app.get('*', (req, res) => res.redirect('/404'));
 
 app.listen(PORT, () => { console.log(`${PORT} never gonna give you up !!!`); });
 
