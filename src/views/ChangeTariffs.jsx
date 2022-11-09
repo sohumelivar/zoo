@@ -152,7 +152,7 @@ module.exports = function ChangeTariffs({ title, childrenWeekEnd, childrenWeekDa
         <hr />
         </div>
         <div className='article'>
-        <h4>Изменить цену на катание на конном экипаже или электромрбиле по зоопарку</h4>
+        <h4>Изменить цену на катание на конном экипаже или электромобиле по зоопарку</h4>
         </div>
         <div className='thirdDiv'>
         <hr />
