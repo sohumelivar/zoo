@@ -1,0 +1,86 @@
+body, html {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	background: none;
+}
+body {
+	font: Raleway, sans-serif;
+}
+h1.invite {
+	font-size: 30px;
+	color: #000000;
+	font-weight: bolder;
+	margin-top: 30px;
+	margin-left: 25px;
+}
+h1.title {
+	color: #FFFFFF;
+	font-size: 55px;
+	text-align: center;
+}
+.bgimg {
+	background: url("https://cdn.iportal.ru/news/2015/99/preview/d9baae59c6a7f30dd20f0c00ff21a85b17762e0f_3000_2000_c.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover auto;
+	-moz-background-size: cover auto;
+	-o-background-size: cover auto;
+	background-size: cover;
+	min-width: 100%;
+	min-height: 100%;
+}
+.bg-2 {
+	/* Cream */
+	background-color: #FFFFCC;
+}
+.bg-3 {
+	background-color: #2f2f2f;
+	/* Black Gray */
+	color: #fff;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+p.info {
+	margin-top: 20px;
+	margin-left: 20px;
+	padding: 10px;
+	font-size: 20px;
+	color: #000000;
+	font: strong;
+}
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.text {
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+.opacity {
+	background: rgb(204, 204, 204);
+	/* Fallback for older browsers without RGBA-support */
+	background: rgba(204, 204, 204, 0.5);
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+.link {
+	color: #000000;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+@media screen and (max-width: 400px) {
+	.bgimg {background: url("https://res.cloudinary.com/devra29/image/upload/v1491690186/baby_giraffe-dobby_01_p2owh0.jpg"); 
+    background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;}
+}  
+    
+    
