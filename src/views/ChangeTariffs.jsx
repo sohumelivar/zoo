@@ -5,7 +5,6 @@ module.exports = function ChangeTariffs({ title, childrenWeekEnd, childrenWeekDa
   return (
     <Layout username={username} title={title}>
       <script defer src="/js/editTariffs.js" />
-      <script defer src="/js/editTariffsDEV.js" />
       <h3>Change Tariffs</h3>
       <br />
       <br />
