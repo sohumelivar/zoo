@@ -1,7 +1,6 @@
 const React = require('react');
-const isAuth = require('../middlewares/isauth');
 
-module.exports = function Layout({ title, children, username }) {
+module.exports = function Layout({ children }) {
   return (
     <html lang="en">
       <head>
@@ -10,7 +9,7 @@ module.exports = function Layout({ title, children, username }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/css/main.css" />
-        <title>{title}</title>
+        <title>Zoo</title>
       </head>
       <body>
         {children}
