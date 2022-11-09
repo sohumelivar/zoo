@@ -24,6 +24,9 @@ router.get('/', async (req, res) => {
 router.post('/1', async (req, res) => {
   try {
     const { name1 } = req.body;
+    if (!name1.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'adult', dayOfTheWeek: 'weekday' } });
     const result1 = await Tariff.findOne({ where: { visitor: 'adult', dayOfTheWeek: 'weekend' } });
     result.age = Number(name1);
@@ -42,6 +45,9 @@ router.post('/1', async (req, res) => {
 router.post('/2', async (req, res) => {
   try {
     const { name2 } = req.body;
+    if (!name2.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekday' } });
     const result1 = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekend' } });
     result.age = Number(name2);
@@ -61,6 +67,12 @@ router.post('/2', async (req, res) => {
 router.post('/3', async (req, res) => {
   try {
     const { name3 } = req.body;
+    if (!name3.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
+    if (!name3.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'adult', dayOfTheWeek: 'weekday' } });
     result.basicPrice = Number(name3);
     await result.save();
@@ -77,6 +89,9 @@ router.post('/3', async (req, res) => {
 router.post('/4', async (req, res) => {
   try {
     const { name4 } = req.body;
+    if (!name4.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekday' } });
     result.basicPrice = Number(name4);
     await result.save();
@@ -88,6 +103,9 @@ router.post('/4', async (req, res) => {
 router.post('/5', async (req, res) => {
   try {
     const { name5 } = req.body;
+    if (!name5.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'adult', dayOfTheWeek: 'weekend' } });
     result.basicPrice = Number(name5);
     await result.save();
@@ -103,6 +121,9 @@ router.post('/5', async (req, res) => {
 router.post('/6', async (req, res) => {
   try {
     const { name6 } = req.body;
+    if (!name6.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekend' } });
     result.basicPrice = Number(name6);
     await result.save();
@@ -119,6 +140,9 @@ router.post('/6', async (req, res) => {
 router.post('/7', async (req, res) => {
   try {
     const { name7 } = req.body;
+    if (!name7.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'adult', dayOfTheWeek: 'weekday' } });
     result.additionalTicket = Number(name7);
     await result.save();
@@ -132,6 +156,9 @@ router.post('/7', async (req, res) => {
 router.post('/8', async (req, res) => {
   try {
     const { name8 } = req.body;
+    if (!name8.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekday' } });
     result.additionalTicket = Number(name8);
     await result.save();
@@ -144,6 +171,9 @@ router.post('/8', async (req, res) => {
 router.post('/9', async (req, res) => {
   try {
     const { name9 } = req.body;
+    if (!name9.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'adult', dayOfTheWeek: 'weekend' } });
     result.additionalTicket = Number(name9);
     await result.save();
@@ -158,6 +188,9 @@ router.post('/9', async (req, res) => {
 router.post('/10', async (req, res) => {
   try {
     const { name10 } = req.body;
+    if (!name10.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekend' } });
     result.additionalTicket = Number(name10);
     await result.save();
@@ -172,6 +205,9 @@ router.post('/10', async (req, res) => {
 router.post('/11', async (req, res) => {
   try {
     const { name11 } = req.body;
+    if (!name11.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'adult', dayOfTheWeek: 'weekday' } });
     result.ridePrice = Number(name11);
     await result.save();
@@ -185,6 +221,9 @@ router.post('/11', async (req, res) => {
 router.post('/12', async (req, res) => {
   try {
     const { name12 } = req.body;
+    if (!name12.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekday' } });
     result.ridePrice = Number(name12);
     await result.save();
@@ -199,6 +238,9 @@ router.post('/12', async (req, res) => {
 router.post('/13', async (req, res) => {
   try {
     const { name13 } = req.body;
+    if (!name13.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'adult', dayOfTheWeek: 'weekend' } });
     result.ridePrice = Number(name13);
     await result.save();
@@ -215,6 +257,9 @@ router.post('/13', async (req, res) => {
 router.post('/14', async (req, res) => {
   try {
     const { name14 } = req.body;
+    if (!name14.trim()) {
+      return res.status(404).json({ status: 'error', message: 'Необходимо заполнить поле' });
+    }
     const result = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekend' } });
     result.ridePrice = Number(name14);
     await result.save();
