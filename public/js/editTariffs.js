@@ -12,6 +12,7 @@ const input11 = document.querySelector('.input11');
 const input12 = document.querySelector('.input12');
 const input13 = document.querySelector('.input13');
 const input14 = document.querySelector('.input14');
+
 const p1 = document.querySelector('.p1');
 const p2 = document.querySelector('.p2');
 const p3 = document.querySelector('.p3');
@@ -26,6 +27,22 @@ const p11 = document.querySelector('.p11');
 const p12 = document.querySelector('.p12');
 const p13 = document.querySelector('.p13');
 const p14 = document.querySelector('.p14');
+
+const error1 = document.querySelector('#error1');
+const error2 = document.querySelector('#error2');
+const error3 = document.querySelector('#error3');
+const error4 = document.querySelector('#error4');
+const error5 = document.querySelector('#error5');
+const error6 = document.querySelector('#error6');
+const error7 = document.querySelector('#error7');
+const error8 = document.querySelector('#error8');
+const error9 = document.querySelector('#error9');
+const error10 = document.querySelector('#error10');
+const error11 = document.querySelector('#error11');
+const error12 = document.querySelector('#error12');
+const error13 = document.querySelector('#error13');
+const error14 = document.querySelector('#error14');
+
 // ? ------------------------------------------------
 // todo изменение возраста взрослого человека
 
@@ -44,8 +61,12 @@ input1.addEventListener('submit', async (event) => {
         }),
     });
     const data = await response.json();
-    p1.innerHTML = `значение: ${data.age}`;
-    name1.value = null;
+    if (data.status === 'error') {
+      error1.innerHTML = data.message;
+    } else {
+      p1.innerHTML = `значение: ${data.age}`;
+      name1.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -69,8 +90,12 @@ input2.addEventListener('submit', async (event) => {
         }),
     });
     const data = await response.json();
-    p2.innerHTML = `значение: ${data.age}`;
-    name2.value = null;
+    if (data.status === 'error') {
+      error2.innerHTML = data.message;
+    } else {
+      p2.innerHTML = `значение: ${data.age}`;
+      name2.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -95,8 +120,12 @@ input3.addEventListener('submit', async (event) => {
         }),
     });
     const data = await response.json();
-    p3.innerHTML = `значение: ${data.basicPrice}`;
-    name3.value = null;
+    if (data.status === 'error') {
+      error3.innerHTML = data.message;
+    } else {
+      p3.innerHTML = `значение: ${data.basicPrice}`;
+      name3.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -121,8 +150,12 @@ input4.addEventListener('submit', async (event) => {
         }),
     });
     const data = await response.json();
-    p4.innerHTML = `значение: ${data.basicPrice}`;
-    name4.value = null;
+    if (data.status === 'error') {
+      error4.innerHTML = data.message;
+    } else {
+      p4.innerHTML = `значение: ${data.basicPrice}`;
+      name4.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -146,8 +179,12 @@ input5.addEventListener('submit', async (event) => {
         }),
     });
     const data = await response.json();
-    p5.innerHTML = `значение: ${data.basicPrice}`;
-    name5.value = null;
+    if (data.status === 'error') {
+      error5.innerHTML = data.message;
+    } else {
+      p5.innerHTML = `значение: ${data.basicPrice}`;
+      name5.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -171,8 +208,12 @@ input6.addEventListener('submit', async (event) => {
         }),
     });
     const data = await response.json();
-    p6.innerHTML = `значение: ${data.basicPrice}`;
-    name6.value = null;
+    if (data.status === 'error') {
+      error6.innerHTML = data.message;
+    } else {
+      p6.innerHTML = `значение: ${data.basicPrice}`;
+      name6.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -197,8 +238,12 @@ input7.addEventListener('submit', async (event) => {
         }),
     });
     const data = await response.json();
-    p7.innerHTML = `значение: ${data.additionalTicket}`;
-    name7.value = null;
+    if (data.status === 'error') {
+      error7.innerHTML = data.message;
+    } else {
+      p7.innerHTML = `значение: ${data.additionalTicket}`;
+      name7.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -221,8 +266,12 @@ input8.addEventListener('submit', async (event) => {
     });
     const data = await response.json();
     console.log(data);
-    p8.innerHTML = `значение: ${data.additionalTicket}`;
-    name8.value = null;
+    if (data.status === 'error') {
+      error8.innerHTML = data.message;
+    } else {
+      p8.innerHTML = `значение: ${data.additionalTicket}`;
+      name8.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -245,8 +294,12 @@ input9.addEventListener('submit', async (event) => {
     });
     const data = await response.json();
     console.log(data);
-    p9.innerHTML = `значение: ${data.additionalTicket}`;
-    name9.value = null;
+    if (data.status === 'error') {
+      error9.innerHTML = data.message;
+    } else {
+      p9.innerHTML = `значение: ${data.additionalTicket}`;
+      name9.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -270,8 +323,12 @@ input10.addEventListener('submit', async (event) => {
     });
     const data = await response.json();
     console.log(data);
-    p10.innerHTML = `значение: ${data.additionalTicket}`;
-    name10.value = null;
+    if (data.status === 'error') {
+      error10.innerHTML = data.message;
+    } else {
+      p10.innerHTML = `значение: ${data.additionalTicket}`;
+      name10.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -295,8 +352,12 @@ input11.addEventListener('submit', async (event) => {
     });
     const data = await response.json();
     console.log(data);
-    p11.innerHTML = `значение: ${data.ridePrice}`;
-    name11.value = null;
+    if (data.status === 'error') {
+      error11.innerHTML = data.message;
+    } else {
+      p11.innerHTML = `значение: ${data.ridePrice}`;
+      name11.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -320,8 +381,12 @@ input12.addEventListener('submit', async (event) => {
     });
     const data = await response.json();
     console.log(data);
-    p12.innerHTML = `значение: ${data.ridePrice}`;
-    name12.value = null;
+    if (data.status === 'error') {
+      error12.innerHTML = data.message;
+    } else {
+      p12.innerHTML = `значение: ${data.ridePrice}`;
+      name12.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -345,8 +410,12 @@ input13.addEventListener('submit', async (event) => {
     });
     const data = await response.json();
     console.log(data);
-    p13.innerHTML = `значение: ${data.ridePrice}`;
-    name13.value = null;
+    if (data.status === 'error') {
+      error13.innerHTML = data.message;
+    } else {
+      p13.innerHTML = `значение: ${data.ridePrice}`;
+      name13.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
@@ -370,8 +439,12 @@ input14.addEventListener('submit', async (event) => {
     });
     const data = await response.json();
     console.log(data);
-    p14.innerHTML = `значение: ${data.ridePrice}`;
-    name14.value = null;
+    if (data.status === 'error') {
+      error14.innerHTML = data.message;
+    } else {
+      p14.innerHTML = `значение: ${data.ridePrice}`;
+      name14.value = null;
+    }
   } catch (error) {
     console.log('ERROR TEST.JS --- >>> ', error);
   }
