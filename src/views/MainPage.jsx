@@ -9,14 +9,14 @@ module.exports = function MainPage({ title, username }) {
       <script defer src="js/adminLogin.js" />
       <div className="adminDiv container">
         <form id="adminForm">
-          <div className="mb-3">
-            <input name="name" placeholder="login" type="text" className="form-control" />
-          </div>
-          <div className="mb-3">
-            <input name="password" placeholder="password" type="password" className="form-control" />
-          </div>
           <br />
-          <button type="submit" className="btn btn-info entry">Войти</button>
+          <div className="mb-3">
+            <input name="name" placeholder="Имя пользователя" type="text" className="form-control" />
+          </div>
+          <div className="mb-3">
+            <input name="password" placeholder="Пароль" type="password" className="form-control" />
+          </div>
+          <button type="submit" className="btn btn-outline-dark">Войти</button>
           <p id="errLog"> </p>
         </form>
       </div>

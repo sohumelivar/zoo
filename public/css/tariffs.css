@@ -1,0 +1,96 @@
+body, html {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	background: none;
+}
+body {
+	font: Raleway, sans-serif;
+}
+h1.invite {
+	font-size: 30px;
+	color: #000000;
+	font-weight: bolder;
+	margin-top: 15px;
+	margin-left: 25px;
+}
+h1.title {
+	color: #FFFFFF;
+	font-size: 55px;
+	text-align: center;
+}
+.bgimg {
+	background: url("https://funart.pro/uploads/posts/2021-07/1626196526_20-funart-pro-p-oboi-zhivotnie-zhivotnie-krasivo-foto-24.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover auto;
+	-moz-background-size: cover auto;
+	-o-background-size: cover auto;
+	background-size: cover;
+	min-width: 100%;
+	min-height: 100%;
+}
+.bg-2 {
+	/* Cream */
+	background-color: #FFFFCC;
+}
+.bg-3 {
+	background-color: #2f2f2f;
+	/* Black Gray */
+	color: #fff;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+p.info {
+	margin-top: 5px;
+	margin-left: 20px;
+	padding: 8  px;
+	font-size: 20px;
+	color: #000000;
+	font: strong;
+}
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.text {
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+.opacity {
+	background: rgb(94, 93, 93);
+	/* Fallback for older browsers without RGBA-support */
+	background: rgba(255, 255, 255, 0.5);
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+.link {
+	color: #000000;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+	color: gray;
+}
+a:hover {
+	color: black;
+}
+@media screen and (max-width: 400px) {
+	.bgimg {background: url("https://res.cloudinary.com/devra29/image/upload/v1491690186/baby_giraffe-dobby_01_p2owh0.jpg"); 
+    background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;}
+}  
+    
+    
