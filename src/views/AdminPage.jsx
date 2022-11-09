@@ -13,7 +13,7 @@ module.exports = function AdminPage({ title, username }) {
       <div className="container">
         <a href="/changeTariffs"><button type="button" className="btn btn-warning">Изменить тарифы</button></a>
         {' '}
-        <a href="/changeAnimals"><button type="button" className="btn btn-warning">Изменить животных</button></a>
+        <a href="/createanimal"><button type="button" className="btn btn-warning">Изменить животных</button></a>
         {' '}
       </div>
     </Layout>

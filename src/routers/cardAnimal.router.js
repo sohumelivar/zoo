@@ -3,7 +3,7 @@ const renderTemplate = require('../lib/renderTemplate');
 const CardAnimal = require('../views/CardAnimal');
 const { Animal } = require('../../db/models');
 
-router.get('/animal/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const One = await Animal.findOne({ where: { id }, raw: true });

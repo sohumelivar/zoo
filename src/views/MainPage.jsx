@@ -6,7 +6,6 @@ module.exports = function MainPage({ title, username }) {
     <Layout username={username} title={title}>
       <link rel="stylesheet" href="/css/animals.css" />
       <link rel="stylesheet" href="/css/mainPage.css" />
-      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
       <script defer src="js/adminLogin.js" />
       <div className="adminDiv container">
         <form id="adminForm">
@@ -47,13 +46,13 @@ module.exports = function MainPage({ title, username }) {
           </div>
           <footer className="row bg-2">
             <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 link">
-              <a href="" target="_blank" rel="noreferrer">Картинки</a>
+              <a href="" rel="noreferrer">Картинки</a>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 link">
-              <a href="" target="_blank" rel="noreferrer">Зоопарк</a>
+              <a href="" rel="noreferrer">Зоопарк</a>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 link">
-              <a href="" target="blank">Контакты</a>
+              <a href="" rel="noreferrer">Контакты</a>
             </div>
           </footer>
         </div>

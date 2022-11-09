@@ -3,11 +3,11 @@ const renderTemplate = require('../lib/renderTemplate');
 const UpdateAn = require('../views/UpdateAn');
 const { Animal } = require('../../db/models');
 
-router.get('/updateanimal', (req, res) => {
+router.get('/', (req, res) => {
   renderTemplate(UpdateAn, {}, res);
 });
 
-router.post('/updateanimal', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const {
       species, description, short, photo1, photo2, photo3, photo4,

@@ -71,6 +71,15 @@ p.info {
 	text-align: center;
 	font-size: 15px;
 	font-weight: bold;
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+	color: gray;
+}
+a:hover {
+	color: black;
 }
 @media screen and (max-width: 400px) {
 	.bgimg {background: url("https://res.cloudinary.com/devra29/image/upload/v1491690186/baby_giraffe-dobby_01_p2owh0.jpg"); 
