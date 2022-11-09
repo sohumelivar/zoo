@@ -56,7 +56,7 @@ module.exports = function ChangeTariffs({
         </footer>
       </div>
       <div className="container-fluid">
-        <div className="row bgimg">
+        <div className="row bgimg1">
           <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4" />
           <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <h1 className="title">Льготные категории посетителей </h1>

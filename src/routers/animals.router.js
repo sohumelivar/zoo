@@ -6,7 +6,7 @@ const { Animal } = require('../../db/models');
 router.get('/', async (req, res) => {
   try {
     const All = await Animal.findAll({ raw: true });
-    renderTemplate(Anima, { All }, res);
+    renderTemplate(Anima, { All, title: 'Animal page', username: req.session.username }, res);
   } catch (error) {
     console.log(error);
   }
