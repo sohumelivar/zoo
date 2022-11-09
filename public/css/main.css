@@ -1,1 +1,8 @@
-222
+.adminDiv {
+  display: none;
+}
+
+body {
+  background-image: url("");
+  background-size: 100vw;
+}
