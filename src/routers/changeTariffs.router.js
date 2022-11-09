@@ -25,8 +25,11 @@ router.post('/', async (req, res) => {
   try {
     const { name1 } = req.body;
     const result = await Tariff.findOne({ where: { id: '1' } });
+    const result1 = await Tariff.findOne({ where: { id: '4' } });
     result.age = Number(name1);
+    result1.age = Number(name1);
     await result.save();
+    await result1.save();
     res.json(result);
   } catch (error) {
     console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
