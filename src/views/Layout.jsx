@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function Layout({ children }) {
+module.exports = function Layout({ children, username }) {
   return (
     <html lang="en">
       <head>
@@ -13,23 +13,23 @@ module.exports = function Layout({ children }) {
         <title>Zoo</title>
       </head>
       <body>
-        <a href="/"><button type="button" className="btn btn-outline-dark">Главная</button></a>
+        <a href="/"><button type="button" className="btn btn-outline-dark knopki">Главная</button></a>
         {' '}
-        <a href="/animals"><button type="button" className="btn btn-outline-dark">Наши животные</button></a>
+        <a href="/animal"><button type="button" className="btn btn-outline-dark knopki">Наши животные</button></a>
         {' '}
-        <a href="/tariffs"><button type="button" className="btn btn-outline-dark">Тарифы и услуги</button></a>
+        <a href="/tariffs"><button type="button" className="btn btn-outline-dark knopki">Тарифы и услуги</button></a>
         {' '}
         {!username
           ? (
             <>
-              <button id="adminBtn" type="button" className="btn btn-outline-dark">Вход для администратора</button>
+              <button id="adminBtn" type="button" className="btn btn-outline-dark knopki">Вход для администратора</button>
               {' '}
             </>
           ) : (
             <>
-              <a href="/admin"><button type="button" className="btn btn-outline-dark">Страница админа</button></a>
+              <a href="/admin"><button type="button" className="btn btn-outline-dark knopki">Страница админа</button></a>
               {' '}
-              <a href="/logout"><button type="button" className="btn btn-outline-dark">Выход</button></a>
+              <a href="/logout"><button type="button" className="btn btn-outline-dark knopki">Выход</button></a>
             </>
           )}
         <nav className="navMenu" />

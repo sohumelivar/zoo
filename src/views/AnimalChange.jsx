@@ -19,9 +19,7 @@ module.exports = function ChangeAnimals({ title, username }) {
           <button type="submit" className="btn btn-info">Submit</button>
           <p id="err"> </p>
         </form>
-
       </div>
-
     </Layout>
   );
 };

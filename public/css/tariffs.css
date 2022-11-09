@@ -10,7 +10,7 @@ h1.invite {
 	font-size: 30px;
 	color: #000000;
 	font-weight: bolder;
-	margin-top: 30px;
+	margin-top: 15px;
 	margin-left: 25px;
 }
 h1.title {
@@ -19,7 +19,7 @@ h1.title {
 	text-align: center;
 }
 .bgimg {
-	background: url("https://cdn.iportal.ru/news/2015/99/preview/d9baae59c6a7f30dd20f0c00ff21a85b17762e0f_3000_2000_c.jpg") no-repeat center center fixed;
+	background: url("https://funart.pro/uploads/posts/2021-07/1626196526_20-funart-pro-p-oboi-zhivotnie-zhivotnie-krasivo-foto-24.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover auto;
 	-moz-background-size: cover auto;
 	-o-background-size: cover auto;
@@ -39,9 +39,9 @@ h1.title {
 	padding-bottom: 25px;
 }
 p.info {
-	margin-top: 20px;
+	margin-top: 5px;
 	margin-left: 20px;
-	padding: 10px;
+	padding: 8  px;
 	font-size: 20px;
 	color: #000000;
 	font: strong;
@@ -58,14 +58,15 @@ p.info {
 	font-weight: bold;
 }
 .opacity {
-	background: rgb(204, 204, 204);
+	background: rgb(94, 93, 93);
 	/* Fallback for older browsers without RGBA-support */
-	background: rgba(204, 204, 204, 0.5);
+	background: rgba(255, 255, 255, 0.5);
 	margin-top: 50px;
 	margin-bottom: 50px;
 	margin-left: 1px;
 	margin-right: 1px;
 }
+
 .link {
 	color: #000000;
 	text-align: center;

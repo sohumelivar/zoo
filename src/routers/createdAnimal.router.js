@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const renderTemplate = require('../lib/renderTemplate');
-const CreateAnomal = require('../views/CreateAnomal');
+const CreateAnomal = require('../views/CreateAnimal');
 const { Animal } = require('../../db/models');
 
-router.get('/createanimal', (req, res) => {
+router.get('/', (req, res) => {
   renderTemplate(CreateAnomal, {}, res);
 });
 
-router.post('/createanimal', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const {
       species, description, short, photo1, photo2, photo3, photo4,
@@ -15,7 +15,7 @@ router.post('/createanimal', async (req, res) => {
     const NewAnimal = await Animal.create({
       species, description, short, photo1, photo2, photo3, photo4,
     });
-    res.redirect('/animal');
+    res.redirect('/animals');
   } catch (error) {
     console.log('ErrCreate', error);
   }
