@@ -19,7 +19,6 @@ module.exports = function ChangeTariffs({ title, childrenWeekEnd, childrenWeekDa
         <input type="text" name="name1" placeholder="введите возраст"/>
         <button type='submit'>Применить</button>
         </form>
-        </div>
         <hr />
         <div>
         <form className="input2">
@@ -28,6 +27,7 @@ module.exports = function ChangeTariffs({ title, childrenWeekEnd, childrenWeekDa
         <input type="text" name="name2" placeholder="введите возраст"/>
         <button type='submit'>Применить</button>
         </form>
+        </div>
         </div>
         <hr />
         <h5>Изменить цену на единый билет</h5>
