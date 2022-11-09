@@ -64,7 +64,7 @@ input1.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error1.innerHTML = data.message;
     } else {
-      p1.innerHTML = `значение: ${data.age}`;
+      p1.innerHTML = `значение: ${data.age} лет`;
       name1.value = null;
     }
   } catch (error) {
@@ -93,7 +93,7 @@ input2.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error2.innerHTML = data.message;
     } else {
-      p2.innerHTML = `значение: ${data.age}`;
+      p2.innerHTML = `значение: ${data.age} лет`;
       name2.value = null;
     }
   } catch (error) {
@@ -123,7 +123,7 @@ input3.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error3.innerHTML = data.message;
     } else {
-      p3.innerHTML = `значение: ${data.basicPrice}`;
+      p3.innerHTML = `значение: ${data.basicPrice} ₽`;
       name3.value = null;
     }
   } catch (error) {
@@ -153,7 +153,7 @@ input4.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error4.innerHTML = data.message;
     } else {
-      p4.innerHTML = `значение: ${data.basicPrice}`;
+      p4.innerHTML = `значение: ${data.basicPrice} ₽`;
       name4.value = null;
     }
   } catch (error) {
@@ -182,7 +182,7 @@ input5.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error5.innerHTML = data.message;
     } else {
-      p5.innerHTML = `значение: ${data.basicPrice}`;
+      p5.innerHTML = `значение: ${data.basicPrice} ₽`;
       name5.value = null;
     }
   } catch (error) {
@@ -211,7 +211,7 @@ input6.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error6.innerHTML = data.message;
     } else {
-      p6.innerHTML = `значение: ${data.basicPrice}`;
+      p6.innerHTML = `значение: ${data.basicPrice} ₽`;
       name6.value = null;
     }
   } catch (error) {
@@ -241,7 +241,7 @@ input7.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error7.innerHTML = data.message;
     } else {
-      p7.innerHTML = `значение: ${data.additionalTicket}`;
+      p7.innerHTML = `значение: ${data.additionalTicket} ₽`;
       name7.value = null;
     }
   } catch (error) {
@@ -269,7 +269,7 @@ input8.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error8.innerHTML = data.message;
     } else {
-      p8.innerHTML = `значение: ${data.additionalTicket}`;
+      p8.innerHTML = `значение: ${data.additionalTicket} ₽`;
       name8.value = null;
     }
   } catch (error) {
@@ -297,7 +297,7 @@ input9.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error9.innerHTML = data.message;
     } else {
-      p9.innerHTML = `значение: ${data.additionalTicket}`;
+      p9.innerHTML = `значение: ${data.additionalTicket} ₽`;
       name9.value = null;
     }
   } catch (error) {
@@ -326,7 +326,7 @@ input10.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error10.innerHTML = data.message;
     } else {
-      p10.innerHTML = `значение: ${data.additionalTicket}`;
+      p10.innerHTML = `значение: ${data.additionalTicket} ₽`;
       name10.value = null;
     }
   } catch (error) {
@@ -355,7 +355,7 @@ input11.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error11.innerHTML = data.message;
     } else {
-      p11.innerHTML = `значение: ${data.ridePrice}`;
+      p11.innerHTML = `значение: ${data.ridePrice} ₽`;
       name11.value = null;
     }
   } catch (error) {
@@ -384,7 +384,7 @@ input12.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error12.innerHTML = data.message;
     } else {
-      p12.innerHTML = `значение: ${data.ridePrice}`;
+      p12.innerHTML = `значение: ${data.ridePrice} ₽`;
       name12.value = null;
     }
   } catch (error) {
@@ -413,7 +413,7 @@ input13.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error13.innerHTML = data.message;
     } else {
-      p13.innerHTML = `значение: ${data.ridePrice}`;
+      p13.innerHTML = `значение: ${data.ridePrice} ₽`;
       name13.value = null;
     }
   } catch (error) {
@@ -442,7 +442,7 @@ input14.addEventListener('submit', async (event) => {
     if (data.status === 'error') {
       error14.innerHTML = data.message;
     } else {
-      p14.innerHTML = `значение: ${data.ridePrice}`;
+      p14.innerHTML = `значение: ${data.ridePrice} ₽`;
       name14.value = null;
     }
   } catch (error) {
