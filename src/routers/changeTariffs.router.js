@@ -206,6 +206,8 @@ router.post('/13', async (req, res) => {
     res.json(result);
   } catch (error) {
     console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
+  }
+});
 // ? ------------------------------------------------
 // todo Выходной день день, adult
 
@@ -222,4 +224,5 @@ router.post('/14', async (req, res) => {
     console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
   }
 });
+
 module.exports = router;
