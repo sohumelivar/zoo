@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 // ? -------------------------------------------------------------------------------------------------------
 // todo input 1 --------------------------------------------------------------------------------------------
 
-router.post('/', async (req, res) => {
+router.post('/1', async (req, res) => {
   try {
     const { name1 } = req.body;
     const result = await Tariff.findOne({ where: { id: '1' } });
@@ -36,6 +36,98 @@ router.post('/', async (req, res) => {
   }
 });
 
-// todo input 2 --------------------------------------------------------------------------------------------
+// todo input 8 --------------------------------------------------------------------------------------------
+router.post('/8', async (req, res) => {
+  try {
+    const { name8 } = req.body;
+    const result = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekday' } });
+    result.additionalTicket = Number(name8);
+    await result.save();
+    res.json(result);
+  } catch (error) {
+    console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
+  }
+});
+// todo input 9 --------------------------------------------------------------------------------------------
+router.post('/9', async (req, res) => {
+  try {
+    const { name9 } = req.body;
+    const result = await Tariff.findOne({ where: { visitor: 'adult', dayOfTheWeek: 'weekend' } });
+    result.additionalTicket = Number(name9);
+    await result.save();
+    console.log(result, '33333333');
+    res.json(result);
+  } catch (error) {
+    console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
+  }
+});
 
+// todo input 10 --------------------------------------------------------------------------------------------
+router.post('/10', async (req, res) => {
+  try {
+    const { name10 } = req.body;
+    const result = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekend' } });
+    result.additionalTicket = Number(name10);
+    await result.save();
+    console.log(result, '33333333');
+    res.json(result);
+  } catch (error) {
+    console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
+  }
+});
+
+// todo input 11 --------------------------------------------------------------------------------------------
+router.post('/11', async (req, res) => {
+  try {
+    const { name11 } = req.body;
+    const result = await Tariff.findOne({ where: { visitor: 'adult', dayOfTheWeek: 'weekday' } });
+    result.ridePrice = Number(name11);
+    await result.save();
+    console.log(result, '33333333');
+    res.json(result);
+  } catch (error) {
+    console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
+  }
+});
+// todo input 12 --------------------------------------------------------------------------------------------
+router.post('/12', async (req, res) => {
+  try {
+    const { name12 } = req.body;
+    const result = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekday' } });
+    result.ridePrice = Number(name12);
+    await result.save();
+    console.log(result, '33333333');
+    res.json(result);
+  } catch (error) {
+    console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
+  }
+});
+
+// todo input 13 --------------------------------------------------------------------------------------------
+router.post('/13', async (req, res) => {
+  try {
+    const { name13 } = req.body;
+    const result = await Tariff.findOne({ where: { visitor: 'adult', dayOfTheWeek: 'weekend' } });
+    result.ridePrice = Number(name13);
+    await result.save();
+    console.log(result, '33333333');
+    res.json(result);
+  } catch (error) {
+    console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
+  }
+});
+
+// todo input 14 --------------------------------------------------------------------------------------------
+router.post('/14', async (req, res) => {
+  try {
+    const { name14 } = req.body;
+    const result = await Tariff.findOne({ where: { visitor: 'children', dayOfTheWeek: 'weekend' } });
+    result.ridePrice = Number(name14);
+    await result.save();
+    console.log(result, '33333333');
+    res.json(result);
+  } catch (error) {
+    console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
+  }
+});
 module.exports = router;

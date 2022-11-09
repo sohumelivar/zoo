@@ -5,7 +5,7 @@ input1.addEventListener('submit', async (event) => {
   try {
     event.preventDefault();
     const { name1 } = event.target;
-    const response = await fetch('/changeTariffs', {
+    const response = await fetch('/changeTariffs/1', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
