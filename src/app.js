@@ -14,6 +14,7 @@ const tariffsRouter = require('./routers/tariffsPage.router');
 const animalChangeRouter = require('./routers/animalChange.router');
 const mainPageRouter = require('./routers/mainPage.router');
 const loguotRouter = require('./routers/logout.router');
+const page404Router = require('./routers/page404.router');
 
 const app = express();
 const PORT = process.env.PORT ?? 3000;
@@ -38,6 +39,9 @@ app.use('/changeTariffs', isAuth, changeTariffsRouter);
 app.use('/changeAnimals', isAuth, changeAnimalsRouter);
 app.use('/tariffs', tariffsRouter);
 app.use('/changeAnimal', isAuth, animalChangeRouter);
+app.use('/404', page404Router);
+
+app.get('*', (req, res) => res.redirect('/404'));
 
 app.listen(PORT, () => { console.log('never gonna give you up !!!'); });
 
