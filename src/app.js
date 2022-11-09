@@ -17,7 +17,7 @@ const loguotRouter = require('./routers/logout.router');
 const page404Router = require('./routers/page404.router');
 
 const app = express();
-const PORT = process.env.PORT ?? 3000;
+const PORT = process.env.PORT ?? 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -31,6 +31,15 @@ app.use(session({
   saveUninitialized: false,
   cookie: { secure: false },
 }));
+const Animal = require('./router/AnimalRout');
+const CreAn = require('./router/CreateAn');
+const UpdateAn = require('./router/UpdateAnimal');
+const CardAn = require('./router/cardRout');
+
+app.use('/', Animal);
+app.use('/', CreAn);
+app.use('/', UpdateAn);
+app.use('/', CardAn);
 
 app.use('/', mainPageRouter);
 app.use('/admin', isAuth, adminPageRouter);
@@ -46,3 +55,4 @@ app.get('*', (req, res) => res.redirect('/404'));
 app.listen(PORT, () => { console.log('never gonna give you up !!!'); });
 
 // ! reset; npm run dev
+

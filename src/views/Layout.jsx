@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function Layout({ title, children, username }) {
+module.exports = function Layout({ children }) {
   return (
     <html lang="en">
       <head>
@@ -10,7 +10,7 @@ module.exports = function Layout({ title, children, username }) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
         <link rel="stylesheet" href="/css/main.css" />
-        <title>{title}</title>
+        <title>Zoo</title>
       </head>
       <body>
         <a href="/"><button type="button" className="btn btn-outline-dark">Главная</button></a>
