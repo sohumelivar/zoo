@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     const adultWeekEnd = tariffs.find((el) => el.visitor === 'adult' && el.dayOfTheWeek === 'weekend');
     const adultWeekDay = tariffs.find((el) => el.visitor === 'adult' && el.dayOfTheWeek === 'weekday');
     renderTemplate(ChangeTariffs, {
-      title: 'Change tariffs', childrenWeekEnd, childrenWeekDay, adultWeekEnd, adultWeekDay,
+      title: 'Change tariffs', childrenWeekEnd, childrenWeekDay, adultWeekEnd, adultWeekDay, username: req.session.username,
     }, res);
   } catch (error) {
     console.log('ERROR CHANGETARIFFSROUTER.JS --- >>> ', error);
