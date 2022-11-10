@@ -19,7 +19,7 @@ h1.title {
 	text-align: center;
 }
 .bgimg {
-	background: url("https://funart.pro/uploads/posts/2021-07/1626196526_20-funart-pro-p-oboi-zhivotnie-zhivotnie-krasivo-foto-24.jpg") no-repeat center center fixed;
+	background: url("http://wallpapers1.ru/animal/data/Animal_002.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover auto;
 	-moz-background-size: cover auto;
 	-o-background-size: cover auto;
@@ -27,6 +27,16 @@ h1.title {
 	min-width: 100%;
 	min-height: 100%;
 }
+.bgimg1 {
+	background: url("http://wallpapers-image.ru/oboi/wallpapers/wallpapers-animal-04.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover auto;
+	-moz-background-size: cover auto;
+	-o-background-size: cover auto;
+	background-size: cover;
+	min-width: 100%;
+	min-height: 100%;
+}
+
 .bg-2 {
 	/* Cream */
 	background-color: #FFFFCC;

@@ -12,10 +12,10 @@ router.post('/', async (req, res) => {
     const {
       species, description, short, photo1, photo2, photo3, photo4,
     } = req.body;
-    const NewAnimal = await Animal.create({
+    await Animal.create({
       species, description, short, photo1, photo2, photo3, photo4,
     });
-    res.redirect('/animals');
+    res.redirect('/animal');
   } catch (error) {
     console.log('ErrCreate', error);
   }
