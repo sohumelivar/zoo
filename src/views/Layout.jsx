@@ -15,7 +15,9 @@ module.exports = function Layout({ children, username }) {
       <body>
         <a href="/"><button type="button" className="btn btn-outline-dark knopki">Главная</button></a>
         {' '}
+
         <a href="/animal"><button type="button" className="btn btn-outline-dark knopki">Наши животные</button></a>
+
         {' '}
         <a href="/tariffs"><button type="button" className="btn btn-outline-dark knopki">Тарифы и услуги</button></a>
         {' '}

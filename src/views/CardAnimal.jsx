@@ -2,9 +2,9 @@ const React = require('react');
 const Layout = require('./Layout');
 
 module.exports = function CardAnimal({ One }) {
-  console.log('jdfghkdsrghdkrg', One);
   return (
     <Layout>
+      
       <h1> odfghodfghdofg</h1>
 
       <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
@@ -38,8 +38,7 @@ module.exports = function CardAnimal({ One }) {
           <h5 className="card-title">{One.species}</h5>
           <p className="card-text">{One.short}</p>
           <p className="card-text">{One.description}</p>
-          <a href={`/animal/${One.id}`}>Редактировать</a>
-          <a href={`/animal/${One.id}`}>Удалить</a>
+         
         </div>
       </div>
 
