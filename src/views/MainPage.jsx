@@ -6,18 +6,17 @@ module.exports = function MainPage({ title, username }) {
     <Layout username={username} title={title}>
       <link rel="stylesheet" href="/css/animals.css" />
       <link rel="stylesheet" href="/css/mainPage.css" />
-      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
       <script defer src="js/adminLogin.js" />
       <div className="adminDiv container">
         <form id="adminForm">
-          <div className="mb-3">
-            <input name="name" placeholder="login" type="text" className="form-control" />
-          </div>
-          <div className="mb-3">
-            <input name="password" placeholder="password" type="password" className="form-control" />
-          </div>
           <br />
-          <button type="submit" className="btn btn-info entry">Войти</button>
+          <div className="mb-3">
+            <input name="name" placeholder="Имя пользователя" type="text" className="form-control" />
+          </div>
+          <div className="mb-3">
+            <input name="password" placeholder="Пароль" type="password" className="form-control" />
+          </div>
+          <button type="submit" className="btn btn-outline-dark">Войти</button>
           <p id="errLog"> </p>
         </form>
       </div>
@@ -47,13 +46,13 @@ module.exports = function MainPage({ title, username }) {
           </div>
           <footer className="row bg-2">
             <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 link">
-              <a href="" target="_blank" rel="noreferrer">Картинки</a>
+              <a href="" rel="noreferrer">Картинки</a>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 link">
-              <a href="" target="_blank" rel="noreferrer">Зоопарк</a>
+              <a href="" rel="noreferrer">Зоопарк</a>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 link">
-              <a href="" target="blank">Контакты</a>
+              <a href="" rel="noreferrer">Контакты</a>
             </div>
           </footer>
         </div>

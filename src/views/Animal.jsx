@@ -1,9 +1,10 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Animal({ All }) {
+module.exports = function Animal({ All, title, username }) {
   return (
-    <Layout>
+
+    <Layout username={username} title={title}>
       <script defer src="/js/del.js" />
       <h1>Animals</h1>
       <div id="animals">
@@ -18,9 +19,11 @@ module.exports = function Animal({ All }) {
                 <button id={el.id} style={{ margin: '5px' }} className="btn btn-outline-primary" data-post="delete">Удалить карточку</button>
                 <a href={`/updateanimal/${el.id}`}>Редактировать карточку</a>
               </div>
+
             </div>
 
           </div>
+
         ))}
 
       </div>

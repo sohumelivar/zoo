@@ -19,7 +19,7 @@ h1.title {
 	text-align: center;
 }
 .bgimg {
-	background: url("https://cdn.iportal.ru/news/2015/99/preview/d9baae59c6a7f30dd20f0c00ff21a85b17762e0f_3000_2000_c.jpg") no-repeat center center fixed;
+	background: url("https://myprepod.ru/img/20171105221233259.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover auto;
 	-moz-background-size: cover auto;
 	-o-background-size: cover auto;
@@ -31,6 +31,12 @@ h1.title {
 	/* Cream */
 	background-color: #FFFFCC;
 }
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .bg-3 {
 	background-color: #2f2f2f;
 	/* Black Gray */
@@ -82,7 +88,7 @@ a:hover {
 	color: black;
 }
 @media screen and (max-width: 400px) {
-	.bgimg {background: url("https://res.cloudinary.com/devra29/image/upload/v1491690186/baby_giraffe-dobby_01_p2owh0.jpg"); 
+	.bgimg {background: url("https://myprepod.ru/img/20171105221233259.jpg"); 
     background-repeat: no-repeat;
 background-position: center center;
 background-attachment: fixed;
