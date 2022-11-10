@@ -38,7 +38,7 @@ app.use(session({
 
 app.use('/', mainPageRouter);
 app.use('/admin', isAuth, adminPageRouter);
-app.use('/logout',isAuth, loguotRouter);
+app.use('/logout', isAuth, loguotRouter);
 app.use('/changeTariffs', isAuth, changeTariffsRouter);
 app.use('/changeAnimals', isAuth, changeAnimalsRouter);
 app.use('/tariffs', tariffsRouter);
