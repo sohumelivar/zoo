@@ -9,9 +9,8 @@ const FileStore = require('session-file-store')(session);
 const isAuth = require('./middlewares/isAuth');
 const adminPageRouter = require('./routers/adminPage.router');
 const changeTariffsRouter = require('./routers/changeTariffs.router');
-const changeAnimalsRouter = require('./routers/changeAnimals.router');
+const changeAnimalsRouter = require('./routers/ret');
 const tariffsRouter = require('./routers/tariffsPage.router');
-const animalChangeRouter = require('./routers/animalChange.router');
 const mainPageRouter = require('./routers/mainPage.router');
 const loguotRouter = require('./routers/logout.router');
 const page404Router = require('./routers/page404.router');
@@ -31,15 +30,16 @@ app.use(session({
   saveUninitialized: false,
   cookie: { secure: false },
 }));
-const Animal = require('./router/AnimalRout');
-const CreAn = require('./router/CreateAn');
-const UpdateAn = require('./router/UpdateAnimal');
-const CardAn = require('./router/cardRout');
+const Animal = require('./routers/AnimalRout');
+const CreAn = require('./routers/CreateAn');
+const UpdateAn = require('./routers/ret');
+const CardAn = require('./routers/cardRout');
+const Del = require('./routers/deleteAnimal');
 
 app.use('/', Animal);
-app.use('/', CreAn);
 app.use('/', UpdateAn);
 app.use('/', CardAn);
+app.use('/delete', Del);
 
 app.use('/', mainPageRouter);
 app.use('/admin', isAuth, adminPageRouter);
@@ -47,12 +47,12 @@ app.use('/logout', loguotRouter);
 app.use('/changeTariffs', isAuth, changeTariffsRouter);
 app.use('/changeAnimals', isAuth, changeAnimalsRouter);
 app.use('/tariffs', tariffsRouter);
-app.use('/changeAnimal', isAuth, animalChangeRouter);
+app.use('/', CreAn);
 app.use('/404', page404Router);
 
 app.get('*', (req, res) => res.redirect('/404'));
 
-app.listen(PORT, () => { console.log('never gonna give you up !!!'); });
+app.listen(PORT, () => { console.log(`${PORT}`); });
 
 // ! reset; npm run dev
 

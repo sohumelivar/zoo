@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function Layout({ children }) {
+module.exports = function Layout({ children, username}) {
   return (
     <html lang="en">
       <head>
@@ -15,7 +15,7 @@ module.exports = function Layout({ children }) {
       <body>
         <a href="/"><button type="button" className="btn btn-outline-dark">Главная</button></a>
         {' '}
-        <a href="/animals"><button type="button" className="btn btn-outline-dark">Наши животные</button></a>
+        <a href="/animal"><button type="button" className="btn btn-outline-dark">Наши животные</button></a>
         {' '}
         <a href="/tariffs"><button type="button" className="btn btn-outline-dark">Тарифы и услуги</button></a>
         {' '}

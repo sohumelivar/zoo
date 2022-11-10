@@ -1,11 +1,13 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function CreateAnimal() {
+module.exports = function ChangeAnimals({ id, species }) {
   return (
     <Layout>
-      <h1> Редактирование карточки животного</h1>
-      <form action="/updateanimal" method="POST">
+      <h3>
+        Страница изменения {`${species}`}
+      </h3>
+      <form action={`/updateanimal/${id}`} method="POST">
         <div className="input-group input-group-lg" style={{ margin: '30px' }}>
           <span className="input-group-text" id="inputGroup-sizing-lg">Название животного</span>
           <input name="species" type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" />
@@ -37,8 +39,9 @@ module.exports = function CreateAnimal() {
           <span className="input-group-text" id="inputGroup-sizing-sm">Фото</span>
           <input name="photo4" type="text" className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
         </div>
-        <button className="btn btn-primary" type="submit">Создать карточку</button>
+        <button className="btn btn-primary" type="submit">Редактировать карточку </button>
       </form>
+
     </Layout>
   );
 };
