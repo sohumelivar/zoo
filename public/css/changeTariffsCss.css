@@ -1,0 +1,29 @@
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    width: 40vw
+}
+
+.article {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainDivEditTariff {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.container1 form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
